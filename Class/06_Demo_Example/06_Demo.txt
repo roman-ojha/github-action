@@ -1,0 +1,10 @@
+-> to create github action what you can do is you can go to github repo and create .github/workflow
+-> but what people normally do is go to repo /action and create a new workflow
+
+*) Demo:
+    -> for this example we will chose 'simple workflow'
+    -> if you want to add some other action workflow the just search in github marketplace and copy the code and paste inside the workflow
+    -> https://youtu.be/TLB5MY9BBa4?t=2138
+
+*) Governance around action
+    -> https://github.com/Roman-Ojha/Social-Application/settings/actions

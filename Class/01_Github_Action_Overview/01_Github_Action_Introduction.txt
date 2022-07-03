@@ -1,0 +1,29 @@
+*) Overview:
+    -> GitHub Actions
+    -> Actions & CI (CI = continuos integration)
+    -> CD & Release management (CD = continuos deployment/continuos delivery)
+    -> Self-hosted runners
+    -> Build management
+    -> Package management
+    -> Secrets management
+
+*) Introduction:
+    -> Github action is a platform to automate developer workflow
+    *) What are those workflows?
+        -> add new contributors
+        -> pull requests are created
+    -> https://youtu.be/R8_veQiYBjI?t=155
+
+*) Actions Advantages:
+    -> Fully integrated with GitHub
+    -> Respond to any GitHub Event
+    -> Community-powered workflows
+    -> any platform, any language, any cloud
+
+*) Key functionalities:
+    -> Automate workflows
+    -> Linux, macOS, Windows, and containers
+    -> Matrix builds
+    -> Streaming, searchable, linkable logs
+    -> Build-in secret store
+    -> Easy to write, easy to share

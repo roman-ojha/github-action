@@ -1,0 +1,53 @@
+*) Workflows:
+    -> specify the operation that what you want to achieve  
+    -> Workflows are like pipelines
+    -> Codify useful, customized process
+    -> .yaml syntax
+    -> .github/workflows
+    -> Action run in VMs (Linux, Win, Mac)
+        -> Or Docker on Linux VMs
+    -> Log streaming & artifacts
+    -> Secret store with each repository or organization
+
+*) Workflow files glue together existing actions in sequence
+    -> Listen for particular events
+    -> Then run per-existing actions
+    -> Or shell scripts
+
+*) How GitHub Actions automate these workflow?
+    -> when something happens In or To your repository
+        -> Like some events: PR created, contr.joined, other apps, Issue Created, PR merged
+    -> automatic Actions are executed in response
+    SO,
+        Step 1: Listen to Event:
+            -> PR created, PR merged, other apps, Issue created etc..
+        Step 2: Trigger Workflow
+            -> Workflow: 
+                -> Sort (action)
+                -> Label (action)
+                -> Assign it (action)
+                -> Comment (action)
+
+*) CI/CD with Github Action
+    -> most common workflow for you repository
+    -> Lets Take example:
+        -> given me an environment:
+            -> with Node and Docker available
+            -> with version of specify
+            -> simply connect to a target and deploy
+    
+
+*) EX:
+    -> build:
+        runs-on :${{ matrix.os }}
+        strategy:
+            matrix:
+                node-version:[8.x, 10.x, 12.x]
+                os: [macos-latest, windows-latest, ubuntu-18.04]
+
+    -> Here build will executed nine times, by it wil build for macos for all 3 node version and windows for all 3 node version and so on
+
+*) Starter Workflows:
+    -> GitHub Provided starter workflows
+    -> Pre configured for specific languages and frameworks 
+    -> Suggested workflows based on languages and framework create you own workflows

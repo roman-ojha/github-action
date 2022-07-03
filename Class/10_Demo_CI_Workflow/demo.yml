@@ -1,0 +1,84 @@
+name: Java CI with Gradle
+# this is the name of the workflow which describe what workflow is doing
+# ..is deployed on you repos action page
+
+on:
+  # These are the event. so, every time some events happen we can we can trigger certain workflow
+  # ..name of GitHub even that triggers the workflows
+  push:
+    branches: [main]
+    # so here every time someone push to mater branch we want to trigger this workflow
+  pull_request:
+    branches: [main]
+    # every time pull_request created trigger this workflow
+    # -> https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
+permissions:
+  contents: read
+
+jobs:
+  # now this is the part that get executed whenever those event happen that we have mention in above
+  # Jobs groups set of action that will be executed
+  build:
+    # name of the jobs
+    runs-on: ubuntu-latest
+    # runs-on: ${{matrix.os}}
+    # now here we are referring on all the os that we had specify on 'matrix.os' on bellow
+    # runs on Ubuntu,Windows or macOS
+    # for Example you have and application that you are shipping out to customers that have all three operating system you can test each release for example or each commit to main you can test that on all three operating system
+    # to do that:
+    # strategy:
+    # matrix:
+    # matrix will use whenever you want to use multiple operating system or may be multiple version of application ex: java
+    # os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+        # so when every we want to build the application or run test we need to check out the repository or the code first
+        # actions/ is where predefined action are hosted
+        # so every time we use CI/CD pipelining we will need to use checkout comment
+        # https://github.com/actions
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        # next step is to setup-java and prepare environment with java with version that we defined bellow
+        with:
+          java-version: "1.8"
+          distribution: "temurin"
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+        # this command will change's the permission of gradle file
+        # so when ever we are referring to a action in a repository we use 'uses' attribute
+        # but when ever we are running a command we will use 'run' attribute
+
+      - name: Build with Gradle
+        run: ./gradlew build
+        # here we are building
+
+      - name: Build and Push Docker Image
+        # next step is to build the docker image and push into docker hub
+        # we have either using a command or using the action
+        # so we can write the command that we need for build and pushing docker image this will be: docker login with credentials, docker build, docker push, docker tag
+        # Note: whenever you want to execute step which multiple command that we can do that by pipe syntax '|'
+        # Note: in ubuntu docker will come pre install
+        # run: |
+        #   docker push
+
+        # but alternative to command we can use action
+        # so we can search for these kind of action for example in github marketplace
+        # https://github.com/mr-smithers-excellent/docker-build-push
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: romanojha/demo-app
+        # we are have to specify the id/image_name
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        # so we have to put some important credential as secret for that github provide us the secrets so, go to settings/secrets and create a new secret there
+      # now we will just use Ubuntu os
+  publish:
+    # another job
+    # Note that every job by default run on parallel
+    # but in this case we want the build job to successfully executed only after that we want to 'publish'
+    needs: build
+    # so now only after 'build', 'publish' will executed

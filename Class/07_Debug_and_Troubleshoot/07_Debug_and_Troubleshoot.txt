@@ -1,0 +1,8 @@
+*) https://youtu.be/TLB5MY9BBa4?t=2368
+
+*) Best Practice:
+    -> Versioning
+    -> Documentation
+    -> Test coverage
+    -> Maintain metadata
+    -> Post to the marketplace

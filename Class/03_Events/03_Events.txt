@@ -1,0 +1,7 @@
+*) Events:
+    -> Event is the first code that we specify in the yaml
+    -> GitHub triggered events:
+        -> push, pull_request,public
+    -> Scheduled Events: schedule
+    -> Manually triggered:
+        -> workflow_dispatch (external systems)

@@ -1,0 +1,19 @@
+*) CI/CD Demo:
+     here what we will do is we will:
+    Step 1 : create a Java App with Gradle
+    Step 2 : build Docker Images
+    Step 3 : push to private repo
+
+
+*) Steps:
+     -> so first we will create a java app with Gradle
+          -> https://github.com/Roman-Ojha/Test-Github-Action
+     -> After that we will go to the Repo action and we will chose 'Java with Gradle' template
+     -> After that we will going to take that java artifact file and we will going to build docker image out of it
+     -> and we will deploy to docker hub private repo
+          -> to deploy into docker repo first create the repo in docker hub
+
+
+*)Where does this code run?
+     -> manage by GiHub (BUT you can also host you own!)
+     -> Each job in a workflow runs in a fresh virtual environment

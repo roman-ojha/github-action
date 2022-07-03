@@ -1,0 +1,12 @@
+*) Actions:
+    -> Reusable units of code
+    -> Referencing vs authoring Actions
+    -> Administrative features
+    -> Storing shared Actions
+    -> Post your actions to the GitHub Marketplace
+
+NOTE: you can go to the github marketplace to see all the github action that is available publicly
+    -> https://github.com/marketplace?type=actions
+
+-> you can create a javascript action:
+    -> https://github.com/actions/javascript-action
