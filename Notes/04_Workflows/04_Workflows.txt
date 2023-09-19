@@ -8,6 +8,8 @@
         -> Or Docker on Linux VMs
     -> Log streaming & artifacts
     -> Secret store with each repository or organization
+    -> Workflows are defined in the .github/workflows directory in a repository.
+    -> a repository can have multiple workflows, each of which can perform a different set of tasks. For example, you can have one workflow to build and test pull requests, another workflow to deploy your application every time a release is created, and still another workflow that adds a label every time someone opens a new issue.
 
 *) Workflow files glue together existing actions in sequence
     -> Listen for particular events
@@ -45,7 +47,7 @@
                 node-version:[8.x, 10.x, 12.x]
                 os: [macos-latest, windows-latest, ubuntu-18.04]
 
-    -> Here build will executed nine times, by it wil build for macos for all 3 node version and windows for all 3 node version and so on
+    -> Here build will executed nine times, by it will build for macos for all 3 node version and windows for all 3 node version and so on
 
 *) Starter Workflows:
     -> GitHub Provided starter workflows
