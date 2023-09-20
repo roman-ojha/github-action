@@ -1,0 +1,9 @@
+*) Events:
+    -> https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#events
+    -> Event is the first code that we specify in the yaml
+    -> GitHub triggered events:
+        -> push, pull_request,public
+    -> Scheduled Events: schedule
+    -> You can also trigger a workflow to run on a schedule, by posting to a REST API.
+    -> Manually triggered:
+        -> workflow_dispatch (external systems)
