@@ -1,0 +1,4 @@
+*) Runner:
+  -> https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#runners
+  -> A runner is a server that runs your workflows when they're triggered. Each runner can run a single job at a time. GitHub provides Ubuntu Linux, Microsoft Windows, and macOS runners to run your workflows; each workflow run executes in a fresh, newly-provisioned virtual machine. GitHub also offers larger runners, which are available in larger configurations.
+  -> If you need a different operating system or require a specific hardware configuration, you can host your own runners. For more information about self-hosted runners, see "Hosting your own runners.(https://docs.github.com/en/actions/hosting-your-own-runners)"

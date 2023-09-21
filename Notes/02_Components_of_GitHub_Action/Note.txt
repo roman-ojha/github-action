@@ -1,8 +1,11 @@
 *) Component of Actions:
     -> any github action is composed by three main parts:
-        -> Event  (Trigger Workflows)
+        1. Event  (Trigger Workflows)
             -> Trigger and initiate of an execution of github action workflow
-        -> Workflows  (Use Actions)
+        2. Workflows  (Use Actions)
             -> the structure of all the task and operation that you github action does
-        -> Action 
+        3. Jobs:
+        4. Action 
             -> individual operation that you use to achieve you goal
+        5. Runner:
+            -> Where workflow gets run.

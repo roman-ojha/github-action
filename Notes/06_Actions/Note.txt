@@ -1,9 +1,12 @@
 *) Actions:
+    -> https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#actions
     -> Reusable units of code
     -> Referencing vs authoring Actions
     -> Administrative features
     -> Storing shared Actions
     -> Post your actions to the GitHub Marketplace
+    *) Defination:
+        -> An action is a custom application for the GitHub Actions platform that performs a complex but frequently repeated task. Use an action to help reduce the amount of repetitive code that you write in your workflow files. An action can pull your git repository from GitHub, set up the correct toolchain for your build environment, or set up the authentication to your cloud provider.
 
 NOTE: you can go to the github marketplace to see all the github action that is available publicly
     -> https://github.com/marketplace?type=actions
