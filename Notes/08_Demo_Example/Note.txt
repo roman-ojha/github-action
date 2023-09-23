@@ -4,9 +4,10 @@
 
 *) Example 1:
     -> You can create an example workflow in your repository that automatically triggers a series of commands whenever code is pushed. In this workflow, GitHub Actions checks out the pushed code, installs the bats testing framework, and runs a basic command to output the bats version: bats -v.
-    -> './.github/workflows/example-2.yaml'
+    -> './.github/workflows/example-1.yaml'
 
 *) Demo Example 2:
+    -> './.github/workflows/example-2.yaml'
     -> for this example we will chose 'simple workflow'
     -> if you want to add some other action workflow the just search in github marketplace and copy the code and paste inside the workflow
     -> https://youtu.be/TLB5MY9BBa4?t=2138
